@@ -97,7 +97,7 @@ function MovingContainer1() {
 
   return (
     <div ref={sectionRef} className="moving-section">
-      <h2 className="section-title">Heading of The Images</h2>
+      <h2 className="section-title">Corporate Training</h2>
       <div style={{ height: "10vh" }}></div>
       <motion.div
         className="moving-container"
@@ -109,10 +109,10 @@ function MovingContainer1() {
       >
         <img src={Image1} alt="Image 1" className="image" />
         <img src={Image2} alt="Image 2" className="image" />
-        <img src={Image3} alt="Image 3" className="image" />
+        
       </motion.div>
 
-      <p className="end-message">Ending Message........</p>
+    
     </div>
   );
 }
@@ -139,7 +139,7 @@ function MovingContainer2() {
 
   return (
     <div ref={sectionRef} className="moving-section">
-      <h2 className="section-title">Heading of The Images</h2>
+      <h2 className="section-title">Leadership Program</h2>
       <div style={{ height: "10vh" }}></div>
       <motion.div
         className="moving-container"
@@ -149,12 +149,13 @@ function MovingContainer2() {
         }}
         transition={{ type: "tween", ease: "linear" }}
       >
+        <img src={Image3} alt="Image 3" className="image" />
         <img src={Image4} alt="Image 4" className="image" />
         <img src={Image5} alt="Image 5" className="image" />
-        <img src={Image6} alt="Image 6" className="image" />
+       
       </motion.div>
 
-      <p className="end-message">Ending Message........</p>
+     
     </div>
   );
 }
@@ -181,7 +182,7 @@ function MovingContainer3() {
 
   return (
     <div ref={sectionRef} className="moving-section">
-      <h2 className="section-title">Heading of The Images</h2>
+      <h2 className="section-title">Training Program For Executives</h2>
       <div style={{ height: "10vh" }}></div>
       <motion.div
         className="moving-container"
@@ -191,12 +192,13 @@ function MovingContainer3() {
         }}
         transition={{ type: "tween", ease: "easeOut" }}
       >
+         <img src={Image6} alt="Image 6" className="image" />
         <img src={Image7} alt="Image 7" className="image" />
         <img src={Image8} alt="Image 8" className="image" />
-        <img src={Image9} alt="Image 9" className="image" />
+        
       </motion.div>
 
-      <p className="end-message">Ending Message........</p>
+   
     </div>
   );
 }
@@ -223,7 +225,8 @@ function MovingContainer4() {
 
   return (
     <div ref={sectionRef} className="moving-section">
-      <h2 className="section-title">Heading of The Images</h2>
+      <h2 className="section-title">Student Training (HEI)</h2>
+        
       <div style={{ height: "10vh" }}></div>
       <motion.div
         className="moving-container"
@@ -233,11 +236,19 @@ function MovingContainer4() {
         }}
         transition={{ type: "spring", stiffness: 100, damping: 15 }}
       >
+        <h3 className="section-title">PDP</h3>
+        <img src={Image9} alt="Image 9" className="image" />
+        <h3 className="section-title">Skill Training</h3>
         <img src={Image10} alt="Image 10" className="image4" />
+        
+        <h3 className="section-title">Placement Training</h3>
         <img src={Image11} alt="Image 11" className="image4" />
+
+        <h3 className="section-title">Effective Communication Skills</h3>
+        
       </motion.div>
 
-      <p className="end-message">Ending Message........</p>
+     
     </div>
   );
 }
