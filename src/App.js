@@ -332,6 +332,8 @@ function App() {
 
       {/* who we Section */}
       <br></br>
+      <br></br>
+      <br></br>
       <h1>Elpis Learning Consultants LLP</h1>
       <br></br>
       <h2>Vision</h2>
@@ -376,7 +378,6 @@ function App() {
 
         <section id="mission">
           <h2>Job-ready Students is a Reality</h2>
-          <p>In all facets.</p>
           <h3>Are you ready to open the doors?</h3>
           <p>A new level of Empowerment</p>
           <blockquote style={{fontFamily: '"Brush Script MT", cursive, "Arial", sans-serif', fontSize: '2.4rem',
