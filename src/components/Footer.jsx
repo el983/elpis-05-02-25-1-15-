@@ -58,8 +58,8 @@ const Footer = () => {
       <div className="footer-bottom">
         <p>© 2025 All Rights Reserved by Sikharthy Infotech</p>
         <div className="footer-links">
-          <a href="#">Terms and Conditions</a>
-          <a href="#">Privacy Policy</a>
+          <a href="/terms.html" target="_blank" rel="noopener noreferrer">Terms and Conditions</a>
+          <a href="/privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
         </div>
       </div>
     </footer>
