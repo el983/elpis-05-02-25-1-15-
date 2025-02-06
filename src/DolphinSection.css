@@ -1,0 +1,61 @@
+/* DolphinSection.css */
+
+.dolphin-gif-container {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  background: linear-gradient(to bottom, white 0%, rgba(4, 100, 185, 0.66) 70%, white 100%);
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+.dolphin-text-overlay {
+  position: relative;
+  
+  padding: 20px;
+  color: #002987;
+}
+
+.dolphin-overlay-heading {
+  font-size: 6rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.dolphin-overlay-list {
+  padding: 0;
+  margin: 0;
+  font-size: 3rem;
+  line-height: 1.6;
+}
+
+.dolphin-gif {
+  max-width: 100%;
+  height: 800px;
+  border-radius: 10px;
+}
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .dolphin-section {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .dolphin-text-overlay {
+      transform: translate(-50%, -50%);
+      width: 90%;
+      text-align: right;
+    }
+  
+    .dolphin-overlay-heading {
+      font-size: 2rem;
+    }
+  
+    .dolphin-overlay-list {
+      font-size: 1rem;
+    }
+  }
+  
