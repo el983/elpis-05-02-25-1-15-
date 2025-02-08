@@ -196,6 +196,9 @@ function App() {
           <li>Vocational Training Partners</li>
           <li>International Student Admissions</li>
           <li>Colleges & University Admissions Across the Globe</li>
+          <li>Preparatory Courses</li>
+          <li></li>
+          
           <li><img src={preparatory_courses} alt="preparatory_courses" width="80%" height="auto"></img></li>
         </ul>      
       </div>
