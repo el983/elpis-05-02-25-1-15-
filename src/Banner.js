@@ -44,7 +44,7 @@ const Banner = () => {
                     <button className="oval-button" onClick={scrollToFooter}>
                         Contact
                     </button>
-                    <button className="oval-button">Video</button>
+                    <button className="oval-button">Take a Peak</button>
                 </div>
             </section>
             <section id="Banner" className="main-banner">
