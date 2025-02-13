@@ -75,7 +75,7 @@ function AboutUs() {
       {/* Founder Section */}
       <h3>Founder :</h3>
       <div style={{ height: "5vh" }}></div>
-      <div className="profiles">
+      <div className="founder-profiles">
         <div className="profile">
           <img src={Profile1} alt="Profile 1" />
           <h3>Smita Nandi</h3>
@@ -91,7 +91,7 @@ function AboutUs() {
       {/* Mentors & Advisors Section */}
       <h3>Mentors & Advisors :</h3>
       <div style={{ height: "5vh" }}></div>
-      <div className="profiles">
+      <div className="profiles">  
         <div className="profile">
           <img src={Profile2} alt="Profile 2" />
           <h3>Vijay Chandra</h3>
@@ -112,9 +112,6 @@ function AboutUs() {
           <h3>Avik Roy</h3>
           <p>Fashion & Design Studies</p>
         </div>
-
-      </div>
-      <div className="profiles">
         <div className="profile">
           <img src={Profile5} alt="Profile 5" />
           <h3>Triparna Nandi</h3>
@@ -135,16 +132,13 @@ function AboutUs() {
           <h3>Dr. Arun Kumar Nandi</h3>
           <p>Management & Projects</p>
         </div>
-
-      </div>
-      <div className="profiles">
         <div className="profile">
           <img src={Profile11} alt="Profile 11" />
           <h3>Deepayan Pal</h3>
           <p>Technical Mentor</p>
         </div>
+        </div>
       </div>
-    </div>
   );
 }
 
