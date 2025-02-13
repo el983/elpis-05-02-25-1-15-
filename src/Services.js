@@ -45,7 +45,7 @@ const images = [
       // Moves from bottom-right to top-left when in view and reverses when out of view
       animate={inView ? { opacity: 1, x: -50, y: -50 } : { opacity: 0, x: 50, y: 50 }}
       // Starts from bottom-right
-      initial={{ opacity: 0, x: 50, y: 50 }}
+      initial={{ opacity: 0, x: 0, y: 0 }}
       transition={{ duration: 1, ease: 'easeInOut' }}
     />
   );
@@ -59,7 +59,7 @@ const AnimatedHeading = ({ children, className }) => {
     <motion.h1
       ref={ref}
       className={className}
-      animate={inView ? { opacity: 1, x: 0, y: 0 } : { opacity: 0, x: 50, y: 50 }}
+      animate={inView ? { opacity: 1, x: 0, y: 0 } : { opacity: 1, x: 0, y: 0 }}
       initial={{ opacity: 0, x: 50, y: 50 }}
       transition={{ duration: 1, ease: 'easeInOut' }}
     >
@@ -76,7 +76,7 @@ const AnimatedSubheading = ({ children, className }) => {
     <motion.h2
       ref={ref}
       className={className}
-      animate={inView ? { opacity: 1, x: 0, y: 0 } : { opacity: 0, x: 50, y: 50 }}
+      animate={inView ? { opacity: 1, x: 0, y: 0 } : { opacity: 1, x: 0, y: 0 }}
       initial={{ opacity: 0, x: 50, y: 50 }}
       transition={{ duration: 1, ease: 'easeInOut' }}
     >
@@ -88,9 +88,12 @@ const AnimatedSubheading = ({ children, className }) => {
 export default function Services() {
   return (
     <div className="services-container">
+       <h1 className='section-main-title'>Our Speciality</h1>
       {images.map((section, index) => (
         <div key={index} className="section">
           <AnimatedHeading className="section-title">{section.title}</AnimatedHeading>
+          <br></br>
+          <br></br>
           {section.sources && section.sources.map((src, i) => (
             <AnimatedImage key={i} src={src} alt={src} className="image" />
           ))}
