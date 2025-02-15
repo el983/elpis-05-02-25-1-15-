@@ -13,7 +13,7 @@ const DolphinSection = () => {
         <div className="dolphin-text-overlay">
           <p className="dolphin-overlay-heading">Core Values:</p>
           <ul className="dolphin-overlay-list">
-            <li>Excellence</li>
+            <li>Excellence:Elpis strive for the highest standards in educational guidance and support.</li>
             <li>Trust</li>
             <li>Collaboration</li>
             <li>Integrity</li>
