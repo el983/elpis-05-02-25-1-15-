@@ -68,6 +68,34 @@ import Bookicon from './images/book-icon.png';
 // }
 
 function AboutUs() {
+  useEffect(() => {
+    const images = document.querySelectorAll(".profile img");
+    const observerOptions = {
+      threshold: 0.1, // Adjust as needed
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // When image enters the viewport, fade in
+          entry.target.classList.add("in-view");
+          entry.target.classList.remove("out-of-view");
+        } else {
+          // When image leaves, fade out
+          entry.target.classList.remove("in-view");
+          entry.target.classList.add("out-of-view");
+        }
+      });
+    }, observerOptions);
+
+    images.forEach((img) => observer.observe(img));
+
+    // Cleanup observer on unmount
+    return () => {
+      images.forEach((img) => observer.unobserve(img));
+    };
+  }, []);
+
   return (
     <div className="about-us">
       <h2>About Us</h2>
@@ -84,14 +112,16 @@ function AboutUs() {
         <div className="profile">
           <img src={Profile6} alt="Profile 6" />
           <h3>Joy Chowdhury</h3>
-          <p>Thought Leader, L&D Professional and Emotional Intelligence Coach</p>
+          <p>
+            Thought Leader, L&D Professional and Emotional Intelligence Coach
+          </p>
         </div>
       </div>
       <div style={{ height: "10vh" }}></div>
       {/* Mentors & Advisors Section */}
       <h3>Mentors & Advisors :</h3>
       <div style={{ height: "5vh" }}></div>
-      <div className="profiles">  
+      <div className="profiles">
         <div className="profile">
           <img src={Profile2} alt="Profile 2" />
           <h3>Vijay Chandra</h3>
@@ -137,10 +167,11 @@ function AboutUs() {
           <h3>Deepayan Pal</h3>
           <p>Technical Mentor</p>
         </div>
-        </div>
       </div>
+    </div>
   );
 }
+
 
 function App() {
   return (
