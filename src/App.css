@@ -60,7 +60,6 @@
 .founder-profiles {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 90px;
   justify-items: center;
 }
 
@@ -85,7 +84,7 @@
   border-radius: 8px;
   width: auto;
   background-color: rgb(255, 255, 255);
-  height: 300px;
+  height: 350px;
   object-fit: cover;
   margin-bottom: 20px;
   transition: transform 0.8s ease-in-out;
