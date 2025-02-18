@@ -53,7 +53,6 @@
 .profiles {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 90px;
   justify-items: center;
 }
 
