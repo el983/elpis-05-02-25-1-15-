@@ -165,6 +165,7 @@
   .founder-profiles {
     grid-template-columns: 1fr;
     gap: 15px;
+    padding: auto;
   }
   .profile {
     width: 90%;
