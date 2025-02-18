@@ -3,11 +3,16 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
-
+@font-face {
+  font-family: 'Poor Richard';
+  src: url('./PoorRichardOpti.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 /* App.css */
 .App {
   text-align: center;
-  font-family: "ITC Clearface W01 Regular", serif, Arial, sans-serif;
+  font-family: 'Poor Richard';
   scroll-behavior: smooth;
 }
 
