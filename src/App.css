@@ -53,7 +53,7 @@
 .profiles {
   display: grid;
   padding: 0 100px;
-  margin-right: 40px;
+  margin-right: 45px;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
 }
@@ -61,6 +61,7 @@
 .founder-profiles {
   display: grid;
   padding: 0 100px;
+  margin-right: 45px;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
 }
@@ -166,6 +167,7 @@
     grid-template-columns: 1fr;
     gap: 15px;
     padding: 0 0;
+    margin-right: 0;
   }
   .profile {
     width: 90%;
