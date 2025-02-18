@@ -52,12 +52,14 @@
 
 .profiles {
   display: grid;
+  padding: 0 200px;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
 }
 
 .founder-profiles {
   display: grid;
+  padding: 0 200px;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
 }
