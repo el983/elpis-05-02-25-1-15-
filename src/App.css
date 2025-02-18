@@ -30,7 +30,7 @@
 /* About Us Section */
 .about-us {
   background: linear-gradient(to bottom, #ffffff, #c0def7e1, #ffffff);
-  padding: 50px 200px;
+  padding: 50px 0;
   text-align: center;
   color: #0c0049;
 }
@@ -52,14 +52,14 @@
 
 .profiles {
   display: grid;
-  padding: 0 200px;
+  padding: 0 100px;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
 }
 
 .founder-profiles {
   display: grid;
-  padding: 0 200px;
+  padding: 0 100px;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
 }
