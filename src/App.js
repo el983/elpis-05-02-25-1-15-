@@ -38,12 +38,12 @@ function Who() {
   return (
     <div class="about-us-section">
       <div class="who-are">
-        <h1>WHO</h1>
+        <h1>WE</h1>
         <h1>ARE</h1>
       </div>
       <div class="description">
         <p>
-          <strong>WE ARE</strong> a unique consortium of global providers of professional development programs designed to augment the skills of professionals and to help organizations achieve their business goals. Our offerings include training, coaching, and consulting. In short, everything required to handhold our customers from beginning to end of their knowledge-seeking journey.
+          <strong>A</strong> unique consortium of global providers of professional development programs designed to augment the skills of professionals and to help organizations achieve their business goals. Our offerings include training, coaching, and consulting. In short, everything required to handhold our customers from beginning to end of their knowledge-seeking journey.
         </p>
       </div>
     </div>
