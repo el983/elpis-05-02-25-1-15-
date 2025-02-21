@@ -215,9 +215,10 @@ function App() {
       </div>
       <div style={{height: '20vh'}}></div>
       <div class="video-card">
-      <img src="https://img.youtube.com/vi/2VY-GpXaAlQ/maxresdefault.jpg" alt="Video Thumbnail" class="thumbnail" />
-      <iframe src="https://www.youtube.com/embed/gxGbsXhhZeI?si=H6GzZgY19Lm_u4rV" frameborder="0" allow="autoplay; encrypted-media" class="video"></iframe>
+    <img src="https://img.youtube.com/vi/2VY-GpXaAlQ/maxresdefault.jpg" alt="Video Thumbnail" class="thumbnail" />
+    <iframe src="https://www.youtube.com/embed/gxGbsXhhZeI?si=H6GzZgY19Lm_u4rV" frameborder="0" allow="autoplay; encrypted-media" class="video"></iframe>
       </div>
+
 
       {/* Who we are and Vision  */}
       <Who />
