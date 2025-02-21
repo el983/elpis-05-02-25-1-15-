@@ -216,7 +216,7 @@ function App() {
       <div style={{height: '20vh'}}></div>
       <div class="video-card">
       <img src="https://img.youtube.com/vi/2VY-GpXaAlQ/maxresdefault.jpg" alt="Video Thumbnail" class="thumbnail" />
-      <iframe src="https://www.youtube.com/embed/2VY-GpXaAlQ?" frameborder="0" allow="autoplay; encrypted-media" class="video"></iframe>
+      <iframe src="https://www.youtube.com/watch?v=gxGbsXhhZeI" frameborder="0" allow="autoplay; encrypted-media" class="video"></iframe>
       </div>
 
       {/* Who we are and Vision  */}
