@@ -191,7 +191,7 @@
       z-index: 1000;
     }
 
-    @media (max-width:  900px) {
+    @media (max-width: 900px) {
 
       .first-section {
         margin-left: -20vw;
@@ -262,6 +262,9 @@
         width: 150px;
       }
 
+      /* .bottom-left-gif {
+        display: block !important;
+      } */
     }
   </style>
 </head>
@@ -336,7 +339,7 @@
       'wheel',
       function (e) {
         e.preventDefault(); // Prevent default vertical scroll
-        mainContent.scrollLeft += e.deltaY;
+        mainContent.scrollLeft += e.deltaY * 6;
       },
       { passive: false }
     );
