@@ -36,8 +36,6 @@
       height: 100vh;
       background-color: rgb(181, 130, 140);
       color: white;
-      /* Use relative positioning for absolutely positioned children */
-      position: fixed;
     }
 
     /* Container for the undo icon */
@@ -169,13 +167,14 @@
       white-space: nowrap;
     }
 
-
-    .eq-img {
+    .eq-img,
+    .eq-img2 {
       width: 100%;
+      opacity: 0; /* Start hidden; will animate in */
+      transform: translateY(20px);
     }
 
     .eq-img2 {
-      width: 100%;
       margin-top: 30%;
     }
 
@@ -230,7 +229,7 @@
 
     @media (max-width: 480px) {
 
-      .first-section{
+      .first-section {
         margin-left: 10vw;
       }
 
@@ -261,10 +260,22 @@
       .eq-logo {
         width: 150px;
       }
+    }
 
-      /* .bottom-left-gif {
-        display: block !important;
-      } */
+    /* Fade-in from bottom animation */
+    .fade-in {
+      animation: fadeInFromBottom 0.8s ease-out forwards;
+    }
+
+    @keyframes fadeInFromBottom {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
@@ -329,20 +340,46 @@
     </div>
     <img src="Phone Rotate Sticker.gif" alt="Animated GIF" class="bottom-left-gif">
   </div>
-  <!-- Inline JavaScript to convert vertical scrolling to horizontal scrolling -->
+  <!-- Inline JavaScript to convert vertical scrolling to horizontal scrolling and trigger fade-in animations -->
   <script>
     // Select the main content container that handles horizontal scrolling
     const mainContent = document.querySelector('.main-content');
 
-    // Listen for wheel events and convert vertical delta into horizontal scrolling
+    // Increase horizontal scroll speed by multiplying the delta
     mainContent.addEventListener(
       'wheel',
       function (e) {
         e.preventDefault(); // Prevent default vertical scroll
-        mainContent.scrollLeft += e.deltaY * 6;
+        mainContent.scrollLeft += e.deltaY * 4;
       },
       { passive: false }
     );
+
+    // Intersection Observer to trigger fade-in animation on images when they enter the viewport
+    const images = document.querySelectorAll('.eq-img, .eq-img2');
+    const observerOptions = {
+      root: mainContent, // Because our scroll container is .main-content
+      threshold: 0.5    // Trigger when 50% of the image is visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Remove and re-add the fade-in class to re-trigger the animation
+          entry.target.classList.remove('fade-in');
+          // Trigger reflow to reset the animation
+          void entry.target.offsetWidth;
+          entry.target.classList.add('fade-in');
+        } else {
+          // Optional: remove the class when not in view, so it re-animates on re-entry
+          entry.target.classList.remove('fade-in');
+        }
+      });
+    }, observerOptions);
+
+    images.forEach(image => {
+      observer.observe(image);
+    });
   </script>
 </body>
 
