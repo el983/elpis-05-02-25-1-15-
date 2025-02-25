@@ -65,7 +65,7 @@
     }
   
     .oval-button {
-      width: 75px; /* Smaller width for smaller screens */
+      width: 80px; /* Smaller width for smaller screens */
       height: 30px; /* Smaller height for smaller screens */
       font-size: 10px; /* Smaller font size for smaller screens */
     }
