@@ -21,7 +21,7 @@ const Footer = () => {
         <div className="footer-section">
           <h2>About Elpis</h2>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam id consectetur autem, aliquid necessitatibus, amet vel pariatur error atque est recusandae. Excepturi dolorem quo quibusdam omnis sit debitis vitae architecto?
+            Elpis Learning provides high-quality, accessible online courses to enhance digital skills and productivity. Our expert-led training empowers learners with practical knowledge for personal and professional growth.
           </p>
           <div className="social-icons">
             <a href="#" className="social-icon youtube"><FaYoutube /></a>
@@ -35,7 +35,7 @@ const Footer = () => {
         <div className="footer-section">
           <h2>Contact Details</h2>
           <p>+91-00000 00000</p>
-          <p>demo@demo.com</p>
+          <p>info@elpislearning.com</p>
         </div>
 
         {/* Address */}
