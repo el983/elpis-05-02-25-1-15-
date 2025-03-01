@@ -5,11 +5,16 @@ const DolphinSection = () => {
   return (
     <section className="dolphin-section">
       <div className="dolphin-gif-container">
-        <img
-          src="/dolphin.gif"
-          alt="Dolphin swimming"
-          className="dolphin-gif"
-        />
+      <div class="video-container">
+      <video width="90%" height="100%" autoPlay loop muted playsInline>
+        <source 
+            src="/Recording 2025-02-28 225938.webm" 
+            type='video/mp4; codecs="hvc1"'/>
+        <source 
+            src="/Recording 2025-02-28 225938.webm" 
+            type="video/webm"/>
+      </video>
+      </div>
         <div className="dolphin-text-overlay">
           <p className="dolphin-overlay-heading">Core Values:</p>
           <ul className="dolphin-overlay-list">
