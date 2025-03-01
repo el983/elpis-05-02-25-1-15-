@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Take a Peek</title>
+  <style>
+    @font-face {
+      font-family: 'Poor Richard';
+      src: url('/PoorRichardOpti.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Poor Richard', cursive;
+      background-color: #fefaf3;
+    }
+
+    /* Vertical Navigation Bar */
+    .vertical-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 60px;
+      height: 100vh;
+      background-color:rgb(176, 60, 83);
+      color: white;
+    }
+
+    /* Container for the undo icon */
+    .nav-top {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-top: 10px;
+    }
+
+    /* Undo icon styling */
+    .undo-icon {
+      width: 24px;
+      height: 24px;
+      fill: white;
+      cursor: pointer;
+    }
+
+    /* Vertical nav text styling (centered vertically) */
+    .nav-text {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      transform: translateY(-50%);
+      writing-mode: vertical-rl;
+      text-transform: uppercase;
+      font-size: 1.9rem;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* Main content area (with horizontal scrolling) */
+    .main-content {
+      margin-left: 80px;
+      height: 100vh;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-behavior: auto;
+    }
+
+    /* Container that holds the horizontally arranged sections */
+    .horizontal-scroll-container {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      width: auto;
+    }
+
+    /* Each horizontal section occupies full viewport width */
+    .section {
+      height: 100%;
+      display: flex;
+      margin-left: -5vw;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .section2 {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-left: 250vw;
+      padding: 1rem;
+    }
+
+    .case-title {
+      font-size: 6rem;
+      color: rgb(181, 130, 140);
+      margin-bottom: 1rem;
+      width: 100vw;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .main-title {
+      font-size: 4rem;
+      color: rgb(176, 60, 83);
+      margin-bottom: 1rem;
+      text-align: center;
+      white-space: nowrap;
+      opacity: 0;
+      transform: translateY(100px)
+    }
+
+    .logo-box {
+      width: 250px;
+      height: 200px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .eq-img {
+      min-width: 20%;
+      opacity: 0;
+      transform: translateY(100px)
+    }
+
+    .eq-img2 {
+      max-width: 14%;
+      opacity: 0;
+      transform: translateY(100px)
+    }
+
+    .eq-img3 {
+      min-width: 35%;
+      opacity: 0;
+      transform: translateY(100px)
+    }
+
+    .eq-img4 {
+      max-width: 10.5%;
+      opacity: 0;
+      transform: translateY(100px)
+    }
+
+    .eq-img5 {
+      max-width: 14%;
+      opacity: 0;
+      transform: translateY(100px)
+    }
+
+    /* Fade-in from bottom animation */
+    @keyframes fade-in-bottom {
+      0% {
+        opacity: 0;
+        transform: translateY(100px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in-from-bottom {
+      animation: fade-in-bottom 1s ease-out forwards;
+      opacity: 0;
+      /* Start as invisible */
+    }
+
+    /* Fade-in from bottom for images */
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+        transform: translateY(100px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Class to trigger fade-in animation on images */
+    .fade-in {
+      animation: fade-in 1s ease-out forwards;
+    }
+
+    @media (max-width: 1300px) {
+      .section2 {
+        margin-left: 280vw;
+      }
+    }
+
+
+    @media (max-width: 1000px) {
+
+      .horizontal-scroll-container{
+        margin-top: -5vh;
+      }
+      .section{
+        margin-left: -10vw;
+      }
+
+      .section2{
+        margin-left: 240vw;
+      }
+
+      .case-title{
+        font-size: 3rem;
+      }
+
+      .main-title{
+        font-size: 2rem;
+      }
+
+      .eq-img {
+        min-width: 25%;
+      }
+
+      .eq-img2 {
+        min-width: 15%;
+      }
+
+      .eq-img3 {
+        max-width: 2%;
+      }
+
+      .logo-box{
+        width: 166.66px;
+        height: 133.33px;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .section{
+        margin-left: -7vw;
+      }
+
+      .section2{
+        margin-left: 320vw;
+      }
+
+      .case-title{
+        font-size: 1.3rem;
+      }
+
+      .main-title{
+        font-size: 1rem;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Fixed Vertical Navigation Bar -->
+  <nav class="vertical-nav">
+    <div class="nav-top">
+      <div class="undo-icon">
+        <!-- Inline SVG for the Undo Icon -->
+        <a href="javascript:history.back();">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 5v-4l-6 6 6 6v-4c3.87 0 7 3.13 7 7s-3.13 7-7 7-7-3.13-7-7H3c0 5 4 9 9 9s9-4 9-9-4-9-9-9z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="nav-text">ELPIS</div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <div class="main-content">
+    <div class="horizontal-scroll-container">
+      <!-- First Section -->
+      <section class="section">
+        <h2 class="case-title">Let's Explore the World of <br>Knowledge & Transformation</h2>
+        <img src="logo1.png" class="logo-box" />
+      </section>
+
+      <!-- Second Section with Images -->
+      <section class="section2" style=" display: flex; flex-direction: row;">
+        <img src="vline.png" height="100%" />
+        <h1 class="main-title">The EQ Paradox</h1>
+        <img src="eq1.jpg" class="eq-img" />
+        <span style="min-width: 30vw; display: block;"></span>
+        <img src="vline.png" height="100%">
+        <h1 class="main-title">After training thousands of<br>
+          Students on Soft Skills</h1>
+        <img src="sucess2.png" class="eq-img2" />
+        <span style="min-width: 30vw; display: block;"></span>
+        <img src="vline.png" height="100%">
+        <h1 class="main-title">Skills & Career<br>
+          How are they connected
+        </h1>
+        <img src="elpis_can_help.jpg" class="eq-img3" />
+        <span style="min-width: 30vw; display: block;"></span>
+        <img src="vline.png" height="100%">
+        <h1 class="main-title">Our Mentors<br>
+          In Action
+        </h1>
+        <span style="min-width: 5vw; display: block;"></span>
+        <iframe src="https://www.youtube.com/embed/LZ8CBc_m4XY?autoplay=1&mute=1" frameborder="0"
+        style="min-width: 50vw; min-height: 28.2vw;" allow="autoplay"></iframe>
+        <span style="min-width: 30vw; display: block;"></span>
+        <img src="vline.png" height="100%">
+        <h1 class="main-title">
+          After training thousands of<br>
+          Students on Soft Skills
+        </h1>
+        <span style="min-width: 5vw; display: block;"></span>
+        <img src="Conventional Training Process_Visual_pages-to-jpg-0001.jpg" class="eq-img5" />
+        <span style="min-width: 5vw; display: block;"></span>
+        <img src="Conventional Training Process_Visual_pages-to-jpg-0002.jpg" class="eq-img5" />
+        <span style="min-width: 5vw; display: block;"></span>
+        <img src="Conventional Training Process_Visual_pages-to-jpg-0003.jpg" class="eq-img4" />
+        <span style="min-width: 5vw; display: block;"></span>
+        <p>&nbsp;</p>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    // Select the main content container that handles horizontal scrolling
+    const mainContent = document.querySelector('.main-content');
+
+    // Listen for wheel events and convert vertical delta into horizontal scrolling
+    mainContent.addEventListener('wheel', function (e) {
+      e.preventDefault(); // Prevent default vertical scroll
+      mainContent.scrollLeft += e.deltaY;
+    }, { passive: false });
+
+    // Select all images with the classes eq-img and main-title for fade-in effect
+    const images = document.querySelectorAll('.eq-img, .eq-img2, .eq-img3, .eq-img4, .eq-img5, .main-title');
+
+    const observerOptions = {
+      root: mainContent, // Scroll container
+      threshold: 0.1,    // Trigger when 20% of the image is visible
+    };
+
+    // Create an IntersectionObserver to observe the images
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Remove and re-add the fade-in class to re-trigger the animation
+          entry.target.classList.remove('fade-in');
+          void entry.target.offsetWidth; // Trigger reflow to reset animation
+          entry.target.classList.add('fade-in');
+        } else {
+          // Optionally, remove the fade-in class when the image leaves the viewport
+          entry.target.classList.remove('fade-in');
+        }
+      });
+    }, observerOptions);
+    images.forEach(image => observer.observe(image));
+  </script>
+</body>
+
+</html>
