@@ -154,14 +154,14 @@
 
     .eq-img4 {
       max-width: 10.5%;
-      opacity: 0;
-      transform: translateY(100px)
+      /* opacity: 0;
+      transform: translateY(100px) */
     }
 
     .eq-img5 {
       max-width: 14%;
-      opacity: 0;
-      transform: translateY(100px)
+      /* opacity: 0;
+      transform: translateY(100px) */
     }
 
     /* Fade-in from bottom animation */
@@ -230,8 +230,7 @@
       }
 
       .eq-img2 {
-        margin-top: -2px
-        min-width: 10%;
+        min-width: 12%;
       }
 
       .eq-img3 {
@@ -246,7 +245,7 @@
 
     @media (max-width: 450px) {
       .section{
-        margin-left: -9vw;
+        margin-left: -8vw;
       }
 
       .section2{
@@ -317,13 +316,12 @@
         <span style="min-width: 30vw; display: block;"></span>
         <img src="vline.png" height="100%">
         <h1 class="main-title">
-          Conventional Training Process
+          Conventional Training <br>
+          Process
         </h1>
         <span style="min-width: 5vw; display: block;"></span>
         <img src="Conventional Training Process_Visual_pages-to-jpg-0001.jpg" class="eq-img5" />
-        <span style="min-width: 5vw; display: block;"></span>
         <img src="Conventional Training Process_Visual_pages-to-jpg-0002.jpg" class="eq-img5" />
-        <span style="min-width: 5vw; display: block;"></span>
         <img src="Conventional Training Process_Visual_pages-to-jpg-0003.jpg" class="eq-img4" />
         <span style="min-width: 5vw; display: block;"></span>
         <p>&nbsp;</p>
@@ -342,7 +340,7 @@
     }, { passive: false });
 
     // Select all images with the classes eq-img and main-title for fade-in effect
-    const images = document.querySelectorAll('.eq-img, .eq-img2, .eq-img3, .eq-img4, .eq-img5, .main-title');
+    const images = document.querySelectorAll('.eq-img, .eq-img2, .eq-img3, .main-title');
 
     const observerOptions = {
       root: mainContent, // Scroll container
