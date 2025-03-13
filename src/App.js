@@ -29,7 +29,7 @@ import listen_icon from './images/listening_icon.png'
 //Preparatory Courses
 import preparatory_courses from './images/propritory_cource.png'
 //elpis banner 
-import el_banner from '/Elpis Learning Consultants LLP (2).png';
+import el_banner from './images/Elpis Learning Consultants LLP (2).png';
 //Book icon
 import Bookicon from './images/book-icon.png';
 //vision
