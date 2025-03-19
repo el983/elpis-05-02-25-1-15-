@@ -34,7 +34,7 @@ const Footer = () => {
         {/* Contact Details */}
         <div className="footer-section">
           <h2>Contact Details</h2>
-          <p>+91-82749 69037</p>
+          <p>+91-9875535330</p>
           <p>info@elpislearning.com</p>
         </div>
 
