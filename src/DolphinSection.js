@@ -11,7 +11,7 @@ const DolphinSection = () => {
               src="/Recording-2025-02-28-225938.hevc.mp4"
               type='video/mp4; codecs="hvc1"' />
             <source
-              src="/Recording 2025-03-01 120956.webm"
+              src="/Recording 2025-02-28 225938.webm"
               type="video/webm" />
           </video>
           <div className="dolphin-desc"><b style={{fontSize:"3rem"}}>Dolphins</b> are incredible. They are socially skilled, intelligent, agile, joyful, and playful creatures that share many emotional similarities with humans. Their core values are also very similar to humans and and they all have their own unique identities and characteristics.</div>
