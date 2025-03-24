@@ -1,3 +1,4 @@
+
 import React from "react";
 import "./DolphinSection.css";
 
@@ -5,7 +6,7 @@ const DolphinSection = () => {
   return (
     <section className="dolphin-section">
       <div className="dolphin-gif-container">
-        <div class="video-container">
+        /*<div class="video-container">
           <video width="75%" height="100%" autoPlay loop muted playsInline>
             <source
               src="/Recording-2025-02-28-225938.hevc.mp4"
@@ -15,7 +16,7 @@ const DolphinSection = () => {
               type="video/webm" />
           </video>
           <div className="dolphin-desc"><b style={{fontSize:"3rem"}}>Dolphins</b> are incredible. They are socially skilled, intelligent, agile, joyful, and playful creatures that share many emotional similarities with humans. Their core values are also very similar to humans and and they all have their own unique identities and characteristics.</div>
-        </div>
+        </div> */
         <div className="dolphin-text-overlay">
           <p className="dolphin-overlay-heading">Our Core Values:</p>
           <ul className="dolphin-overlay-list">
