@@ -6,7 +6,7 @@ const DolphinSection = () => {
   return (
     <section className="dolphin-section">
       <div className="dolphin-gif-container">
-        /*<div class="video-container">
+        /* <div class="video-container">
           <video width="75%" height="100%" autoPlay loop muted playsInline>
             <source
               src="/Recording-2025-02-28-225938.hevc.mp4"
