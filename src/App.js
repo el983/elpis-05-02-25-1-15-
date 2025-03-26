@@ -32,6 +32,8 @@ import preparatory_courses from './images/propritory_cource.png'
 import el_banner from './images/Elpis Learning Consultants LLP (2).png';
 //Book icon
 import Bookicon from './images/book-icon.png';
+//sipl logo
+import sipl_logo from './images/Sipl-logo-transparent_.png';
 //vision
 // import Visionup from './images/vision_up.png';
 
@@ -277,6 +279,9 @@ function App() {
             <li>Preparatory Courses</li>
             <li></li>
           </ul>
+          <br/>
+            <h1>Our Technical Partner</h1>
+            <a href='https://www.siplhub.com/' target="_blank" rel="noopener noreferrer"><img src={sipl_logo} alt="SIPL LOGO" width="40%" height="auto"></img></a>
         </div>
 
         {/* Mission */}
